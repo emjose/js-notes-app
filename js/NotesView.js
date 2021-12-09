@@ -1,13 +1,15 @@
 export default class NotesView {
-    constructor(root, { onNoteSelect, onNoteAdd, onNoteEdit, onNoteDelete } = {}) {
-        this.root = root;
-        this.onNoteSelect = onNoteSelect;
-        this.onNoteAdd = onNoteAdd;
-        this.onNoteEdit = onNoteEdit;
-        this.onNoteDelete = onNoteDelete;
-        this.root.innerHTML = `
+	constructor(root, { onNoteSelect, onNoteAdd, onNoteEdit, onNoteDelete } = {}) {
+		this.root = root;
+		this.onNoteSelect = onNoteSelect;
+		this.onNoteAdd = onNoteAdd;
+		this.onNoteEdit = onNoteEdit;
+		this.onNoteDelete = onNoteDelete;
+		// JavaScript is rendering the HTML view.
+		this.root.innerHTML = `
             <div class="notes__sidebar">
                 <button class="notes__add" type="button">Add Note</button>
+                <p class="delete">Double click a note to delete</p>
                 <div class="notes__list"></div>
             </div>
             <div class="notes__preview">
@@ -16,30 +18,34 @@ export default class NotesView {
             </div>
         `;
 
-        const btnAddNote = this.root.querySelector(".notes__add");
-        const inpTitle = this.root.querySelector(".notes__title");
-        const inpBody = this.root.querySelector(".notes__body");
+		const btnAddNote = this.root.querySelector(".notes__add");
+		const inpTitle = this.root.querySelector(".notes__title");
+		const inpBody = this.root.querySelector(".notes__body");
 
-        btnAddNote.addEventListener("click", () => {
-            this.onNoteAdd();
-        });
+		// Click event for button to add note.
+		btnAddNote.addEventListener("click", () => {
+			this.onNoteAdd();
+		});
 
-        [inpTitle, inpBody].forEach(inputField => {
-            inputField.addEventListener("blur", () => {
-                const updatedTitle = inpTitle.value.trim();
-                const updatedBody = inpBody.value.trim();
+		// Blur is opposite of focus.
+		// Event for when the user focuses on the input fields and blurs out of the left sidebar.
+		[inpTitle, inpBody].forEach((inputField) => {
+			inputField.addEventListener("blur", () => {
+				const updatedTitle = inpTitle.value.trim();
+				const updatedBody = inpBody.value.trim();
 
-                this.onNoteEdit(updatedTitle, updatedBody);
-            });
-        });
+				this.onNoteEdit(updatedTitle, updatedBody);
+			});
+		});
 
-        this.updateNotePreviewVisibility(false);
-    }
+		this.updateNotePreviewVisibility(false);
+	}
 
-    _createListItemHTML(id, title, body, updated) {
-        const MAX_BODY_LENGTH = 60;
+	// Adding the new note HTML item in the sidebar.
+	_createListItemHTML(id, title, body, updated) {
+		const MAX_BODY_LENGTH = 150;
 
-        return `
+		return `
             <div class="notes__list-item" data-note-id="${id}">
                 <div class="notes__small-title">${title}</div>
                 <div class="notes__small-body">
@@ -47,52 +53,54 @@ export default class NotesView {
                     ${body.length > MAX_BODY_LENGTH ? "..." : ""}
                 </div>
                 <div class="notes__small-updated">
-                    ${updated.toLocaleString(undefined, { dateStyle: "full", timeStyle: "short" })}
+                    ${updated.toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short" })}
                 </div>
             </div>
         `;
-    }
+	}
 
-    updateNoteList(notes) {
-        const notesListContainer = this.root.querySelector(".notes__list");
+	updateNoteList(notes) {
+		const notesListContainer = this.root.querySelector(".notes__list");
 
-        // Empty list
-        notesListContainer.innerHTML = "";
+		// Empty list of notes.
+		notesListContainer.innerHTML = "";
 
-        for (const note of notes) {
-            const html = this._createListItemHTML(note.id, note.title, note.body, new Date(note.updated));
+		for (const note of notes) {
+			const html = this._createListItemHTML(note.id, note.title, note.body, new Date(note.updated));
 
-            notesListContainer.insertAdjacentHTML("beforeend", html);
-        }
+			notesListContainer.insertAdjacentHTML("beforeend", html);
+		}
 
-        // Add select/delete events for each list item
-        notesListContainer.querySelectorAll(".notes__list-item").forEach(noteListItem => {
-            noteListItem.addEventListener("click", () => {
-                this.onNoteSelect(noteListItem.dataset.noteId);
-            });
+		// Selete/Delete events for each list item.
+		notesListContainer.querySelectorAll(".notes__list-item").forEach((noteListItem) => {
+			noteListItem.addEventListener("click", () => {
+				this.onNoteSelect(noteListItem.dataset.noteId);
+			});
 
-            noteListItem.addEventListener("dblclick", () => {
-                const doDelete = confirm("Are you sure you want to delete this note?");
+			noteListItem.addEventListener("dblclick", () => {
+				const doDelete = confirm("Are you sure you want to delete this note?");
 
-                if (doDelete) {
-                    this.onNoteDelete(noteListItem.dataset.noteId);
-                }
-            });
-        });
-    }
+				if (doDelete) {
+					this.onNoteDelete(noteListItem.dataset.noteId);
+				}
+			});
+		});
+	}
 
-    updateActiveNote(note) {
-        this.root.querySelector(".notes__title").value = note.title;
-        this.root.querySelector(".notes__body").value = note.body;
+	updateActiveNote(note) {
+		this.root.querySelector(".notes__title").value = note.title;
+		this.root.querySelector(".notes__body").value = note.body;
 
-        this.root.querySelectorAll(".notes__list-item").forEach(noteListItem => {
-            noteListItem.classList.remove("notes__list-item--selected");
-        });
+		this.root.querySelectorAll(".notes__list-item").forEach((noteListItem) => {
+			noteListItem.classList.remove("notes__list-item--selected");
+		});
 
-        this.root.querySelector(`.notes__list-item[data-note-id="${note.id}"]`).classList.add("notes__list-item--selected");
-    }
+		this.root
+			.querySelector(`.notes__list-item[data-note-id="${note.id}"]`)
+			.classList.add("notes__list-item--selected");
+	}
 
-    updateNotePreviewVisibility(visible) {
-        this.root.querySelector(".notes__preview").style.visibility = visible ? "visible" : "hidden";
-    }
+	updateNotePreviewVisibility(visible) {
+		this.root.querySelector(".notes__preview").style.visibility = visible ? "visible" : "hidden";
+	}
 }
