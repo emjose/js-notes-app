@@ -1,7 +1,7 @@
 <p id="header"><p>
 
 <table><tr>
-<td> <a href="https://github.com/emjose/agile-101/#header"><img src="Assets/header-left.png" alt="previous" style="width: 200px;"/></a> </td>
+<td> <a href="https://github.com/emjose/take-a-guess/#header"><img src="Assets/header-left.png" alt="previous" style="width: 200px;"/></a> </td>
 <td> <a href="https://github.com/emjose/one-hundred/#header"><img src="Assets/header-center.png" alt="100 days of code" style="width: 580px;"/></a> </td>
 <td> <a href="/#header"><img src="Assets/header-right-g.png" alt="next" style="width: 200px;"/></a> </td>
 
@@ -15,7 +15,7 @@
 
 <br>
 
-<a href="url">![JS Notes](Assets/preview-032-js-notes.png)</a>
+<a href="https://js-notes-app.vercel.app/">![JS Notes](Assets/preview-032-js-notes.png)</a>
 
 #
 
@@ -37,9 +37,10 @@
 
 ### Day 32: December 9, 2021
 
--   text
--   text
--   text
+-   To focus on <a href="https://www.codecademy.com/article/what-is-crud">CRUD</a>, I worked on a JavaScript notes app based on a <a href="https://youtu.be/01YKQmia2Jw">tutorial</a> by <a href="https://www.youtube.com/dcode-software">dcode</a>.
+-   I adapted the functionality to include keyboard accessibility and an adjustable sidebar.
+-   The app uses local storage for data persistence and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules">JavaScript modules</a> to render the HTML view.
+-   **This app is best viewed on a desktop computer or a laptop**, using a Chrome, Firefox, or Edge browser.
 
 #
 
@@ -50,22 +51,31 @@
 #### Git clone and cd into the repo folder:
 
 ```
-git clone git@github.com:emjose/js-notes.git && cd js-notes
+git clone git@github.com:emjose/js-notes-app.git && cd js-notes-app
 ```
 
-#### Run the command:
+#### Right-click on the index.html file and select "Open With Live Server":
 
-```
-open index.html
-```
+![#100DaysOfCode](Assets/inter-live-server.png)
 
 #
 
 <p id="live-site"><p>
 
-<a href="url">![Live Site](Assets/inter-live-site.png)</a>
+<a href="https://js-notes-app.vercel.app/">![Live Site](Assets/inter-live-site.png)</a>
 
-<a href="url">![Live Site](Assets/032-js-notes.gif)</a>
+<a href="https://js-notes-app.vercel.app/">![Live Site](Assets/032-js-notes1.gif)</a>
+The sidebar is adjustable, and long titles and note contents are scrollable.
+<br>
+<br>
+<a href="https://js-notes-app.vercel.app/">![Live Site](Assets/032-js-notes2.gif)</a>
+• Local storage is used for data persistence, and notes can be viewed, added, and deleted.
+
+• When a note is selected for deletion, a browser prompt appears for confirmation (not captured by GIF recording).
+<br>
+<br>
+<a href="https://js-notes-app.vercel.app/">![Live Site](Assets/032-js-notes3.gif)</a>
+Notes can be edited, and the list of notes are sorted by most recent timestamp of edits.
 
 #
 
@@ -73,13 +83,17 @@ open index.html
 
 <a href=#resources>![Resources](Assets/inter-resources.png)</a>
 
--   #### [**_alt-text_**](***URL***)
+-   #### [Free Frontend](https://freefrontend.com/)
 
--   #### [**_alt-text_**](***URL***)
+-   #### [What is CRUD?](https://www.codecademy.com/article/what-is-crud)
 
--   #### [**_alt-text_**](***URL***)
+-   #### [Supercalifragilisticexpialidocious](https://www.youtube.com/watch?v=uZNRzc3hWvE)
 
--   #### [Build a Notes App Tutorial](https://www.youtube.com/watch?v=01YKQmia2Jw)
+-   #### [CSS Scan Box Shadow Examples](https://getcssscan.com/css-box-shadow-examples)
+
+-   #### [Build a Notes App Tutorial](https://www.youtube.com/watch?v=01YKQmia2Jw) by [dcode](https://www.youtube.com/channel/UCjX0FtIZBBVD3YoCcxnDC4g)
+
+-   #### [Adjustable Sidebar Examples on CodePen](https://codepen.io/search/pens?q=adjustable+sidebar&order=created_desc)
 
 -   #### [My blog on how I created my Github READMEs](https://emmanueljose.medium.com/readme-a-makeover-story-b9c7be37a6de?sk=7ae6623d365409d875753e4604e42ffd)
 

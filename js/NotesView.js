@@ -46,7 +46,7 @@ export default class NotesView {
 		const MAX_BODY_LENGTH = 150;
 
 		return `
-            <div class="notes__list-item" data-note-id="${id}">
+            <div class="notes__list-item" data-note-id="${id}" tabindex="0">
                 <div class="notes__small-title">${title}</div>
                 <div class="notes__small-body">
                     ${body.substring(0, MAX_BODY_LENGTH)}
