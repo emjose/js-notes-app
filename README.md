@@ -54,7 +54,7 @@
 git clone git@github.com:emjose/js-notes-app.git && cd js-notes-app
 ```
 
-#### Right-click on the index.html file and select "Open With Live Server":
+#### Right-click on the index.html file and select `Open with Live Server`
 
 ![#100DaysOfCode](Assets/inter-live-server.png)
 
@@ -65,16 +65,19 @@ git clone git@github.com:emjose/js-notes-app.git && cd js-notes-app
 <a href="https://js-notes-app.vercel.app/">![Live Site](Assets/inter-live-site.png)</a>
 
 <a href="https://js-notes-app.vercel.app/">![Live Site](Assets/032-js-notes1.gif)</a>
+
 The sidebar is adjustable, and long titles and note contents are scrollable.
 <br>
 <br>
 <a href="https://js-notes-app.vercel.app/">![Live Site](Assets/032-js-notes2.gif)</a>
+
 • Local storage is used for data persistence, and notes can be viewed, added, and deleted.
 
 • When a note is selected for deletion, a browser prompt appears for confirmation (not captured by GIF recording).
 <br>
 <br>
 <a href="https://js-notes-app.vercel.app/">![Live Site](Assets/032-js-notes3.gif)</a>
+
 Notes can be edited, and the list of notes are sorted by most recent timestamp of edits.
 
 #
@@ -87,9 +90,9 @@ Notes can be edited, and the list of notes are sorted by most recent timestamp o
 
 -   #### [What is CRUD?](https://www.codecademy.com/article/what-is-crud)
 
--   #### [Supercalifragilisticexpialidocious](https://www.youtube.com/watch?v=uZNRzc3hWvE)
-
 -   #### [CSS Scan Box Shadow Examples](https://getcssscan.com/css-box-shadow-examples)
+
+-   #### [Supercalifragilisticexpialidocious](https://www.youtube.com/watch?v=uZNRzc3hWvE)
 
 -   #### [Build a Notes App Tutorial](https://www.youtube.com/watch?v=01YKQmia2Jw) by [dcode](https://www.youtube.com/channel/UCjX0FtIZBBVD3YoCcxnDC4g)
 
