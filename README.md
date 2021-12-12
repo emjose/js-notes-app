@@ -38,7 +38,7 @@
 ### Day 32: December 9, 2021
 
 -   To focus on <a href="https://www.codecademy.com/article/what-is-crud">CRUD</a>, I worked on a JavaScript notes app based on a <a href="https://youtu.be/01YKQmia2Jw">tutorial</a> by <a href="https://www.youtube.com/dcode-software">dcode</a>.
--   I adapted the functionality to include keyboard accessibility and an adjustable sidebar.
+-   The app is keyboard accessible and has an adjustable sidebar with usage of <a href="https://interactjs.io/">Interact.js</a>.
 -   The app uses local storage for data persistence and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules">JavaScript modules</a> to render the HTML view.
 -   **This app is best viewed on a desktop computer or a laptop**, using a Chrome, Firefox, or Edge browser.
 
@@ -89,6 +89,8 @@ Notes can be edited, and the list of notes are sorted by most recent timestamp o
 -   #### [Free Frontend](https://freefrontend.com/)
 
 -   #### [What is CRUD?](https://www.codecademy.com/article/what-is-crud)
+
+-   #### [Interact.js library](https://interactjs.io/)
 
 -   #### [CSS Scan Box Shadow Examples](https://getcssscan.com/css-box-shadow-examples)
 
