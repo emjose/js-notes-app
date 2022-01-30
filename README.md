@@ -3,7 +3,7 @@
 <table><tr>
 <td> <a href="https://github.com/emjose/agile-101/#header"><img src="Assets/header-left.png" alt="previous" style="width: 200px;"/></a> </td>
 <td> <a href="https://github.com/emjose/one-hundred/#header"><img src="Assets/header-center.png" alt="100 days of code" style="width: 580px;"/></a> </td>
-<td> <a href="https://github.com/emjose/js-notes-app#header"><img src="Assets/header-right-g.png" alt="next" style="width: 200px;"/></a> </td>
+<td> <a href="https://github.com/emjose/js-notes-app/#header"><img src="Assets/header-right-g.png" alt="next" style="width: 200px;"/></a> </td>
 
 </tr></table>
 
