@@ -26,6 +26,7 @@ body {
 }
 
 /* The "Add Note" button */
+/* Background and background-image properties prevent flicker effect on hover. */
 .notes__add {
 	overflow: hidden;
 	width: 100%;
@@ -34,6 +35,7 @@ body {
 	border-radius: 50px;
 	margin-top: 0.4em;
 	margin-bottom: 0.6em;
+	background: #ff790b;
 	background-image: linear-gradient(-180deg, #ff790b, #e62c03);
 	color: #ffffff;
 	box-shadow: rgba(32, 32, 63, 0.452) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
@@ -41,7 +43,7 @@ body {
 	font-weight: 600;
 	font-size: 2em;
 	white-space: nowrap;
-	transition: all 0.2s;
+	transition: all 0.2s ease-in-out;
 	cursor: pointer;
 }
 
@@ -74,7 +76,7 @@ body {
 	border-radius: 6px;
 	margin: 20px auto;
 	background: #4d8ecc;
-	transition: all 0.2s;
+	transition: all 0.2s ease-in-out;
 	cursor: pointer;
 }
 
