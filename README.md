@@ -3,7 +3,7 @@
 <table><tr>
 <td> <a href="https://github.com/emjose/agile-101/#header"><img src="Assets/header-left.png" alt="previous" style="width: 200px;"/></a> </td>
 <td> <a href="https://github.com/emjose/one-hundred/#header"><img src="Assets/header-center.png" alt="100 days of code" style="width: 580px;"/></a> </td>
-<td> <a href="https://github.com/emjose/js-notes-app/#header"><img src="Assets/header-right-g.png" alt="next" style="width: 200px;"/></a> </td>
+<td> <a href="https://github.com/emjose/design-patterns-101/#header"><img src="Assets/header-right.png" alt="next" style="width: 200px;"/></a> </td>
 
 </tr></table>
 
@@ -43,7 +43,7 @@
 
 -   The app uses local storage for data persistence and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules">JavaScript modules</a> to render the HTML view.
 
--   **This app is best viewed on a desktop computer or a laptop**, using a Chrome, Firefox, or Edge browser.
+-   **This app is best viewed on a desktop computer or a laptop, using a Chrome, Firefox, or Edge browser.**
 
 #
 
@@ -69,7 +69,9 @@ git clone git@github.com:emjose/js-notes-app.git && cd js-notes-app
 
 <a href="https://js-notes-app.vercel.app/">![Live Site](Assets/032-js-notes1.gif)</a>
 
-The sidebar is adjustable, and long titles and note contents are scrollable.
+• **This app is best viewed on a desktop computer or a laptop, using a Chrome, Firefox, or Edge browser.**
+
+• The sidebar is adjustable, and long titles and note contents are scrollable.
 <br>
 <br>
 <a href="https://js-notes-app.vercel.app/">![Live Site](Assets/032-js-notes2.gif)</a>
