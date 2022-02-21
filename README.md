@@ -11,7 +11,7 @@
 
 <p id="project-title"><p>
 
-<a href=#table-of-contents>![***repo-alt-text***](Assets/inter-032-js-notes.png)</a>
+<a href=#table-of-contents>![JS Notes](Assets/inter-032-js-notes.png)</a>
 
 <br>
 
@@ -59,7 +59,7 @@ git clone git@github.com:emjose/js-notes-app.git && cd js-notes-app
 
 #### Right-click on the index.html file and select `Open with Live Server`
 
-![#installation](Assets/inter-live-server.png)
+<a href=#installation>![Installation](Assets/inter-live-server.png)</a>
 
 #
 
