@@ -59,7 +59,7 @@ git clone git@github.com:emjose/js-notes-app.git && cd js-notes-app
 
 #### Right-click on the index.html file and select `Open with Live Server`
 
-![#100DaysOfCode](Assets/inter-live-server.png)
+![#installation](Assets/inter-live-server.png)
 
 #
 
