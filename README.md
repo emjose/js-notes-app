@@ -53,13 +53,15 @@
 
 #### Git clone and cd into the repo folder:
 
-```
+```console
 git clone git@github.com:emjose/js-notes-app.git && cd js-notes-app
 ```
 
 #### Right-click on the index.html file and select `Open with Live Server`
 
 <a href=#installation>![Installation](Assets/inter-live-server.png)</a>
+
+<br>
 
 #
 
