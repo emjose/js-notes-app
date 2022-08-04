@@ -11,7 +11,7 @@
 
 <p id="project-title"><p>
 
-<a href=#table-of-contents>![JS Notes](Assets/inter-032-js-notes.png)</a>
+<a href=#table-of-contents>![JS Notes](https://res.cloudinary.com/dn1e07eul/image/upload/v1659385856/Readme%20Headers/inter-032-js-notes_k7ij42.png)</a>
 
 <br>
 
@@ -21,7 +21,7 @@
 
 <p id="table-of-contents"><p>
 
-<a href=#table-of-contents>![Table of Contents](Assets/inter-toc.png)</a>
+<a href=#table-of-contents>![Table of Contents](https://res.cloudinary.com/dn1e07eul/image/upload/v1659389776/Readme%20Headers/inter-100hash_kjpgmt.png)</a>
 
 -   [100 Days of Code](#100days)
 -   [Installation](#installation)
