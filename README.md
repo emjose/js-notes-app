@@ -1,9 +1,9 @@
 <p id="header"><p>
 
 <table><tr>
-<td> <a href="https://github.com/emjose/agile-101/#header"><img src="Assets/header-left.png" alt="previous" style="width: 200px;"/></a> </td>
-<td> <a href="https://github.com/emjose/one-hundred/#header"><img src="Assets/header-center.png" alt="100 days of code" style="width: 580px;"/></a> </td>
-<td> <a href="https://github.com/emjose/design-patterns-101/#header"><img src="Assets/header-right.png" alt="next" style="width: 200px;"/></a> </td>
+<td> <a href="https://github.com/emjose/agile-101/#header"><img src="https://res.cloudinary.com/dn1e07eul/image/upload/v1659330996/Readme%20Headers/header-left_ctkix5.png" alt="previous" style="width: 200px;"/></a> </td>
+<td> <a href="https://github.com/emjose/one-hundred/#header"><img src="https://res.cloudinary.com/dn1e07eul/image/upload/v1659330606/Readme%20Headers/header-center_bkbdbt.png" alt="100 days of code" style="width: 580px;"/></a> </td>
+<td> <a href="https://github.com/emjose/design-patterns-101/#header"><img src="https://res.cloudinary.com/dn1e07eul/image/upload/v1659330646/Readme%20Headers/header-right_eftaz9.png" alt="next" style="width: 200px;"/></a> </td>
 
 </tr></table>
 
