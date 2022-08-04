@@ -33,7 +33,7 @@
 
 <p id="100days"><p>
 
-<a href=#100days>![#100DaysOfCode](Assets/inter-100hash.png)</a>
+<a href=#100days>![#100DaysOfCode](https://res.cloudinary.com/dn1e07eul/image/upload/v1659389776/Readme%20Headers/inter-100hash_kjpgmt.png)</a>
 
 ### Day 32: December 9, 2021
 
@@ -49,7 +49,7 @@
 
 <p id="installation"><p>
 
-<a href=#installation>![Installation](Assets/inter-installation.png)</a>
+<a href=#installation>![Installation](https://res.cloudinary.com/dn1e07eul/image/upload/v1659389842/Readme%20Headers/inter-installation_j9ixlq.png)</a>
 
 #### Git clone and cd into the repo folder:
 
