@@ -72,15 +72,21 @@ git clone git@github.com:emjose/js-notes-app.git && cd js-notes-app
 • **This app is best viewed on a desktop computer or a laptop, using a Chrome, Firefox, or Edge browser.**
 
 • The sidebar is adjustable, and long titles and note contents are scrollable.
+
+#
+
 <br>
-<br>
+
 <a href="https://js-notes-app.vercel.app/">![Live Site](Assets/032-js-notes2.gif)</a>
 
 • Local storage is used for data persistence, and notes can be viewed, added, and deleted.
 
 • When a note is selected for deletion, a browser prompt appears for confirmation (not captured by GIF recording).
+
+#
+
 <br>
-<br>
+
 <a href="https://js-notes-app.vercel.app/">![Live Site](Assets/032-js-notes3.gif)</a>
 
 Notes can be edited, and the list of notes are sorted by most recent timestamp of edits.
