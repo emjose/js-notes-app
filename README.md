@@ -61,8 +61,6 @@ git clone git@github.com:emjose/js-notes-app.git && cd js-notes-app
 
 <a href=#installation>![Installation](Assets/inter-live-server.png)</a>
 
-<br>
-
 #
 
 <p id="live-site"><p>
