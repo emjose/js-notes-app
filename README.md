@@ -73,7 +73,7 @@ git clone git@github.com:emjose/js-notes-app.git && cd js-notes-app
 
 • The sidebar is adjustable, and long titles and note contents are scrollable.
 
-#
+<a href=#live-site>![Click below to expand](https://res.cloudinary.com/dn1e07eul/image/upload/v1659569626/Readme%20Headers/inter-click-small_xzkijp.png)</a>
 
 <details>
 <summary><b>GIF demo: Data Persistence</b></summary>
