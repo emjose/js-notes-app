@@ -1,10 +1,29 @@
 @import url("https://use.typekit.net/ejy0gds.css");
 
+:root {
+	--orange-1: #ff790b;
+	--orange-2: #ff831e;
+	--orange-3: #f8471f;
+	--blue-1: #ddedfa;
+	--white: #ffffff;
+	--delete-color: rgba(230, 230, 230, 0.61);
+	--gradient-1: linear-gradient(-180deg, #ff790b, #e62c03);
+	--gradient-2: radial-gradient(#0258a8, #01255c);
+	--focus-outline: 5px solid var(--orange-2);
+	--box-shadow-1: rgba(32, 32, 63, 0.452) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+	--box-shadow-2: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+	--box-shadow-3: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+	--box-shadow-4: rgba(65, 65, 65, 0.275) 0px 5px 15px 0px;
+	--github-fill: #094a83;
+	--github-color: var(--blue-1);
+	--github-focus: var(--orange-3);
+}
+
 html,
 body {
 	height: 100%;
 	margin: 0;
-	background: #ddedfa;
+	background: var(--blue-1);
 	font-family: proxima-nova, sans-serif;
 }
 
@@ -20,8 +39,8 @@ body {
 	overflow-y: auto;
 	padding: 2em;
 	width: 320px;
-	border-right: 12px solid #fff;
-	background: radial-gradient(#0258a8, #01255c);
+	border-right: 12px solid var(--white);
+	background: var(--gradient-2);
 	background-repeat: no-repeat;
 }
 
@@ -35,10 +54,10 @@ body {
 	border-radius: 50px;
 	margin-top: 0.4em;
 	margin-bottom: 0.6em;
-	background: #ff790b;
-	background-image: linear-gradient(-180deg, #ff790b, #e62c03);
-	color: #ffffff;
-	box-shadow: rgba(32, 32, 63, 0.452) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+	background: var(--orange-1);
+	background-image: var(--gradient-1);
+	color: var(--white);
+	box-shadow: var(--box-shadow-1);
 	font-family: inherit;
 	font-weight: 600;
 	font-size: 2em;
@@ -48,12 +67,12 @@ body {
 }
 
 .notes__add:hover {
-	background: #ff790b;
+	background: var(--orange-1);
 	transform: scale(1.03);
 }
 
 .notes__add:active {
-	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+	box-shadow: var(--box-shadow-2);
 	transform: scale(0.98);
 }
 
@@ -64,7 +83,7 @@ body {
 	-webkit-box-orient: vertical;
 	overflow: hidden;
 	margin: 8px;
-	color: rgba(230, 230, 230, 0.61);
+	color: var(--delete-color);
 	text-align: center;
 	user-select: none;
 }
@@ -87,13 +106,19 @@ body {
 }
 
 .notes__list-item:hover {
-	background: #ff831e;
+	background: var(--orange-2);
 	transform: scale(1.03);
 }
 
+.notes__add:focus,
+.notes__list-item:focus {
+	outline: var(--focus-outline);
+	outline-offset: 5px;
+}
+
 .notes__list-item:active {
-	background: #f8471f;
-	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+	background: var(--orange-3);
+	box-shadow: var(--box-shadow-2);
 	transform: scale(0.98);
 }
 
@@ -178,7 +203,7 @@ body {
 	flex-grow: 1;
 	flex-direction: column;
 	padding: 1.6em 2em;
-	background: #ddedfa;
+	background: var(--blue-1);
 }
 
 /* Title Input - "New Note" */
@@ -188,17 +213,17 @@ body {
 	margin: 4px auto;
 	margin-top: -2px;
 	color: #024388;
-	background: #ddedfa;
-	outline: #ddedfa;
-	border: #ddedfa;
+	background: var(--blue-1);
+	outline: var(--blue-1);
+	border: var(--blue-1);
 	font-family: proxima-nova, sans-serif;
 	font-weight: 800;
 	font-size: 4.5em;
 }
 
 .notes__title:focus {
-	background: #fff;
-	box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+	background: var(--white);
+	box-shadow: var(--box-shadow-3);
 	border-radius: 6px;
 	display: block;
 	min-height: 10px;
@@ -238,11 +263,52 @@ body {
 .notes__body:focus {
 	overflow-y: auto;
 	border: none;
-	background: #ffffff;
-	box-shadow: rgba(65, 65, 65, 0.275) 0px 5px 15px 0px;
+	background: var(--white);
+	box-shadow: var(--box-shadow-4);
 	outline: none;
 }
 
 #take-note-label {
 	display: none;
+}
+
+.github-corner:focus .octo-arm,
+.github-corner:hover .octo-arm {
+	animation: octocat-wave 560ms ease-in-out;
+}
+
+.github-corner:focus svg path {
+	fill: var(--github-focus);
+}
+
+.github-corner:focus .octo-arm,
+.github-corner:focus .octo-body {
+	fill: var(--github-color);
+}
+
+@keyframes octocat-wave {
+	0%,
+	100% {
+		transform: rotate(0);
+	}
+
+	20%,
+	60% {
+		transform: rotate(-25deg);
+	}
+
+	40%,
+	80% {
+		transform: rotate(10deg);
+	}
+}
+
+@media (max-width: 500px) {
+	.github-corner:hover .octo-arm {
+		animation: none;
+	}
+
+	.github-corner .octo-arm {
+		animation: octocat-wave 560ms ease-in-out;
+	}
 }
