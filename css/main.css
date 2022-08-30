@@ -242,3 +242,7 @@ body {
 	box-shadow: rgba(65, 65, 65, 0.275) 0px 5px 15px 0px;
 	outline: none;
 }
+
+#take-note-label {
+	display: none;
+}
