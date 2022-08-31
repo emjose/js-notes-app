@@ -5,11 +5,19 @@
 	--orange-2: #ff831e;
 	--orange-3: #f8471f;
 	--blue-1: #ddedfa;
+	--blue-2: #1b4369e3;
+	--blue-3: #1738577e;
+	--blue-4: rgb(21, 63, 126);
+	--placeholder: #9fc1dd;
+	--off-white: #f8fcff;
 	--white: #ffffff;
+	--black: #000000;
+	--gray: #c2c2c2c4;
 	--delete-color: rgba(230, 230, 230, 0.61);
 	--gradient-1: linear-gradient(-180deg, #ff790b, #e62c03);
 	--gradient-2: radial-gradient(#0258a8, #01255c);
-	--focus-outline: 5px solid var(--orange-2);
+	--focus-outline-1: 3px solid var(--orange-2);
+	--focus-outline-2: 3px solid white;
 	--box-shadow-1: rgba(32, 32, 63, 0.452) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 	--box-shadow-2: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 	--box-shadow-3: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
@@ -17,23 +25,31 @@
 	--github-fill: #094a83;
 	--github-color: var(--blue-1);
 	--github-focus: var(--orange-3);
+	--transition: all 0.2s ease-in-out;
+	--proxima: proxima-nova, sans-serif;
 }
+
+/* --------------------------------------------------------------------------- */
 
 html,
 body {
 	height: 100%;
 	margin: 0;
 	background: var(--blue-1);
-	font-family: proxima-nova, sans-serif;
+	font-family: var(--proxima);
 }
 
+/* --------------------------------------------------------------------------- */
 /* Container for the left sidebar and the right main content. */
+
 .notes {
 	display: flex;
 	height: 100%;
 }
 
+/* --------------------------------------------------------------------------- */
 /* The left sidebar */
+
 .notes__sidebar {
 	flex-shrink: 0;
 	overflow-y: auto;
@@ -44,8 +60,10 @@ body {
 	background-repeat: no-repeat;
 }
 
+/* --------------------------------------------------------------------------- */
 /* The "Add Note" button */
 /* Background and background-image properties prevent flicker effect on hover. */
+
 .notes__add {
 	overflow: hidden;
 	width: 100%;
@@ -62,7 +80,7 @@ body {
 	font-weight: 600;
 	font-size: 2em;
 	white-space: nowrap;
-	transition: all 0.2s ease-in-out;
+	transition: var(--transition);
 	cursor: pointer;
 }
 
@@ -76,7 +94,9 @@ body {
 	transform: scale(0.98);
 }
 
+/* --------------------------------------------------------------------------- */
 /* Delete Instructions */
+
 .delete {
 	display: -webkit-box;
 	-webkit-line-clamp: 1;
@@ -88,21 +108,22 @@ body {
 	user-select: none;
 }
 
+/* --------------------------------------------------------------------------- */
 /* The list items */
+
 .notes__list-item {
 	overflow: hidden;
 	height: 94px;
-	border-radius: 6px;
+	border-radius: 5px;
 	margin: 20px auto;
-	background: #4d8ecc;
-	transition: all 0.2s ease-in-out;
+	background: #0070d8;
+	transition: var(--transition);
 	cursor: pointer;
 }
 
 .notes__list-item--selected:active,
 .notes__list-item--selected {
-	border-radius: 6px;
-	background: #f7fcff;
+	background: var(--off-white);
 }
 
 .notes__list-item:hover {
@@ -112,8 +133,15 @@ body {
 
 .notes__add:focus,
 .notes__list-item:focus {
-	outline: var(--focus-outline);
-	outline-offset: 5px;
+	outline-offset: 3px;
+}
+
+.notes__add:focus {
+	outline: var(--focus-outline-1);
+}
+
+.notes__list-item:focus {
+	outline: var(--focus-outline-2);
 }
 
 .notes__list-item:active {
@@ -122,7 +150,9 @@ body {
 	transform: scale(0.98);
 }
 
+/* --------------------------------------------------------------------------- */
 /* Small Title in each list item */
+
 .notes__small-title {
 	text-overflow: ellipsis;
 	display: -webkit-box;
@@ -130,14 +160,16 @@ body {
 	-webkit-box-orient: vertical;
 	overflow: hidden;
 	padding: 1px 10px;
-	color: rgb(223, 231, 245);
+	color: var(--white);
 	font-size: 1.5em;
 	font-weight: 550;
 	letter-spacing: 0.03em;
 	line-height: 40px;
 }
 
+/* --------------------------------------------------------------------------- */
 /* Small Note Body in each list item */
+
 .notes__small-body {
 	text-overflow: ellipsis;
 	display: -webkit-box;
@@ -145,10 +177,12 @@ body {
 	-webkit-box-orient: vertical;
 	overflow: hidden;
 	padding: 0px 10px;
-	color: #a7c6e4c9;
+	color: var(--white);
 }
 
+/* --------------------------------------------------------------------------- */
 /* Small Timestamp in each list item */
+
 .notes__small-updated {
 	text-overflow: ellipsis;
 	display: -webkit-box;
@@ -156,7 +190,7 @@ body {
 	-webkit-box-orient: vertical;
 	overflow: hidden;
 	padding: 0px 10px;
-	color: #c2c2c2c4;
+	color: var(--gray);
 	font-size: 0.8em;
 	font-weight: 300;
 	line-height: 30px;
@@ -164,40 +198,38 @@ body {
 	visibility: hidden;
 }
 
+/* --------------------------------------------------------------------------- */
 /* Selected Item List */
-.notes__list-item--selected .notes__small-title {
-	color: #1b4369e3;
-}
 
+.notes__list-item--selected .notes__small-title,
 .notes__list-item--selected .notes__small-body {
-	color: #2d6396a4;
+	color: var(--blue-2);
 }
 
 .notes__list-item--selected .notes__small-updated {
-	color: #1738577e;
+	color: var(--blue-3);
 	visibility: visible;
 }
 
+/* --------------------------------------------------------------------------- */
 /* List items in hover/active state */
 .notes__list-item:hover .notes__small-updated {
-	color: rgba(5, 5, 5, 0.5);
 	visibility: visible;
 }
 
-.notes__list-item:hover .notes__small-title {
-	color: #fff9f5;
-}
-
 .notes__list-item:hover .notes__small-updated {
-	color: #8a3e00;
+	color: var(--black);
 }
 
+.notes__list-item:hover .notes__small-title,
 .notes__list-item:hover .notes__small-body,
 .notes__list-item:active .notes__small-updated {
-	color: #ffe3cd;
+	color: var(--white);
 }
 
+/* --------------------------------------------------------------------------- */
 /* The right main content to preview/edit notes */
+
 .notes__preview {
 	display: flex;
 	flex-grow: 1;
@@ -206,17 +238,19 @@ body {
 	background: var(--blue-1);
 }
 
+/* --------------------------------------------------------------------------- */
 /* Title Input - "New Note" */
+
 .notes__title {
 	width: 96%;
 	padding: 0px 20px 0px 20px;
 	margin: 4px auto;
 	margin-top: -2px;
-	color: #024388;
+	color: var(--github-fill);
 	background: var(--blue-1);
 	outline: var(--blue-1);
 	border: var(--blue-1);
-	font-family: proxima-nova, sans-serif;
+	font-family: var(--proxima);
 	font-weight: 800;
 	font-size: 4.5em;
 }
@@ -224,7 +258,6 @@ body {
 .notes__title:focus {
 	background: var(--white);
 	box-shadow: var(--box-shadow-3);
-	border-radius: 6px;
 	display: block;
 	min-height: 10px;
 	border: none;
@@ -233,12 +266,16 @@ body {
 	margin-top: -2px;
 }
 
+/* --------------------------------------------------------------------------- */
 /* Placeholder for a blank title input - "New Note" */
+
 ::placeholder {
-	color: #9fc1dd;
+	color: var(--placeholder);
 }
 
+/* --------------------------------------------------------------------------- */
 /* Note Input/textarea - "Take Note..." */
+
 .notes__body {
 	display: block;
 	overflow-y: auto;
@@ -249,10 +286,10 @@ body {
 	border: none;
 	border-radius: 6px;
 	margin: 10px auto;
-	margin-top: 43px;
-	background: #f8fcff;
-	color: rgb(21, 63, 126);
-	font-family: proxima-nova, sans-serif;
+	margin-top: 21px;
+	background: var(--off-white);
+	color: var(--blue-4);
+	font-family: var(--proxima);
 	font-size: 1.2em;
 	line-height: 1.7;
 	letter-spacing: 0.5px;
@@ -269,7 +306,15 @@ body {
 }
 
 #take-note-label {
-	display: none;
+	color: var(--blue-1);
+	user-select: none;
+}
+
+/* --------------------------------------------------------------------------- */
+/* Github Corner */
+
+.github-corner {
+	transition: var(--transition);
 }
 
 .github-corner:focus .octo-arm,
@@ -285,6 +330,16 @@ body {
 .github-corner:focus .octo-body {
 	fill: var(--github-color);
 }
+
+.github-corner:hover svg,
+.github-corner:focus svg {
+	height: 80px;
+	width: 80px;
+	transition: var(--transition);
+}
+
+/* --------------------------------------------------------------------------- */
+/* Animation and Media Queries */
 
 @keyframes octocat-wave {
 	0%,
