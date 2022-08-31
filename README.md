@@ -29,6 +29,8 @@
 -   [Resources](#resources)
 -   [Let's Connect!](#lets-connect)
 
+<br>
+
 #
 
 <p id="100days"><p>
@@ -44,6 +46,8 @@
 -   The app uses local storage for data persistence and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules">JavaScript modules</a> to render the HTML view.
 
 -   **This app is best viewed on a desktop computer or a laptop, using a Chrome, Firefox, or Edge browser.**
+
+<br>
 
 #
 
@@ -61,6 +65,8 @@ git clone git@github.com:emjose/js-notes-app.git && cd js-notes-app
 
 <a href=#installation>![Installation](Assets/inter-live-server.png)</a>
 
+<br>
+
 #
 
 <p id="live-site"><p>
@@ -69,9 +75,11 @@ git clone git@github.com:emjose/js-notes-app.git && cd js-notes-app
 
 <a href="https://js-notes-app.vercel.app/">![Live Site](Assets/032-js-notes1.gif)</a>
 
-• **This app is best viewed on a desktop computer or a laptop, using a Chrome, Firefox, or Edge browser.**
+• **[JS Notes](https://js-notes-app.vercel.app/) is best viewed on a desktop computer or a laptop, using a Chrome, Firefox, or Edge browser.**
 
 • The sidebar is adjustable, and long titles and note contents are scrollable.
+
+• **[JS Notes](https://js-notes-app.vercel.app/)** is a [progressive web app](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps).
 
 <a href=#live-site>![Click below to expand](https://res.cloudinary.com/dn1e07eul/image/upload/v1659569626/Readme%20Headers/inter-click-small_xzkijp.png)</a>
 
@@ -99,6 +107,8 @@ Notes can be edited, and the list of notes are sorted by most recent timestamp o
 
 </details>
 
+<br>
+
 #
 
 <p id="resources"><p>
@@ -120,6 +130,8 @@ Notes can be edited, and the list of notes are sorted by most recent timestamp o
 -   #### [Adjustable Sidebar Examples on CodePen](https://codepen.io/search/pens?q=adjustable+sidebar&order=created_desc)
 
 -   #### [My blog on how I created my Github READMEs](https://emmanueljose.medium.com/readme-a-makeover-story-b9c7be37a6de?sk=7ae6623d365409d875753e4604e42ffd)
+
+<br>
 
 #
 
