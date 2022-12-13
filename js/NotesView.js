@@ -96,9 +96,7 @@ export default class NotesView {
 			noteListItem.classList.remove("notes__list-item--selected");
 		});
 
-		this.root
-			.querySelector(`.notes__list-item[data-note-id="${note.id}"]`)
-			.classList.add("notes__list-item--selected");
+		this.root.querySelector(`.notes__list-item[data-note-id="${note.id}"]`).classList.add("notes__list-item--selected");
 	}
 
 	updateNotePreviewVisibility(visible) {
